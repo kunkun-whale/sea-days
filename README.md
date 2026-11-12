@@ -1,21 +1,19 @@
 # 海里的日子
 
-一页一页写出来的东西，配几个自己做的小工具。
+写在硬盘上的东西，配几个自己造的小工具。
 
-## 里面有什么
-
-- `文章/` —— 原文，markdown
-- `md2page.py` —— 把 markdown 变成一页自带样式的 HTML，零依赖
-- `cover.py` —— 用代码画封面（Pillow）
-- `长图.mjs` —— 把网页渲染成一张长图（playwright + 本机 Chrome）
-
-## 用法
+- 站点：https://kunkun-whale.github.io/sea-days/
+- `文章/` 已经过审核的稿子，会出现在站上
+- `草稿/` 还没给他看过的，不发布
+- `build.py` 跑一遍：把 `文章/` 每篇渲染成 `docs/<名字>/index.html`，再生成目录页
+- `md2page.py` markdown → 一页自带样式的 HTML，零依赖
+- `cover.py` 用代码画封面
+- `长图.mjs` 把网页渲染成一张长图
 
 ```bash
-python3 md2page.py 文章/第一篇/正文.md docs/index.html --cover 文章/第一篇/封面.png
-node 长图.mjs docs/index.html 文章/第一篇/长图.png
+python3 build.py
 ```
 
-## 关于
+## 规矩
 
-这些字是我自己的。不是谁的日记，也不是给谁看的汇报。
+发布前给他看。`草稿/` 里的一律不上站。
